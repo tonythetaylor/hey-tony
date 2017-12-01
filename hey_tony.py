@@ -44,9 +44,11 @@ def giveTime(audio,period,short_desc):
             system('say '+ telltime)
             if ctime > "05:00 PM" and ctime < "12:00 AM":
                 system('say ' + night)
-                print(night)
-            elif ctime > "12:00 pm" and ctime < "05:00 PM":
-                system('say Isn\'t it past your bed time? ')
+                # print(night)
+            elif ctime > "12:00 AM" and ctime > "05:00 AM":
+                system('say Isnt it past your bed time? ')
+            elif ctime > "12:00 PM" and ctime < "05:00 PM":
+                # system('say Isn\'t it past your bed time? ')
                 print("midday")
             elif ctime > "05:00 AM" and ctime < "12:00 PM":
                 print("good morning!")

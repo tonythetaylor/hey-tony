@@ -88,7 +88,8 @@ def getCurrentWeather():
     index = short_desc.find('Showers')
     output_line = short_desc[:index] + ' of ' + short_desc[index:]
     short_desc = output_line
-    temp = tonight.find(class_="temp").get_text()
+    # removed 'temp' until the degree symbol can be removed. Throws Unicode/ASCII error. 
+    temp = tonight.find(class_="temp").get_text() 
 
     # night = period + "there will be a " + short_desc + " " + temp
     return period,short_desc
